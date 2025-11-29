@@ -1,0 +1,15 @@
+class StickerModel {
+  final String id;
+  final String imgPath;
+
+  StickerModel({required this.id, required this.imgPath});
+
+  // == 연산자 오버로드
+  @override
+  bool operator ==(Object other) {
+    return (other as StickerModel).id == id;
+  }
+
+  @override
+  int get hashCode => id.hashCode;
+}
