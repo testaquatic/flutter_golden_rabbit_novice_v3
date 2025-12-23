@@ -36,10 +36,6 @@ dependencies:
   cupertino_icons: ^1.0.8
   # 달력 기능
   table_calendar: ^3.2.0
-  # ORM
-  drift: ^2.30.0
-  # drift 유틸리티 패키지
-  drift_flutter: ^0.2.8
   # 경로
   path_provider: ^2.1.5
   path: ^1.9.1
@@ -53,6 +49,8 @@ dependencies:
   uuid: ^4.5.2
   # 다국어화
   intl: ^0.20.2
+  # sqlite3
+  sqlite3: ^3.1.1
 
 
 dev_dependencies:
@@ -65,8 +63,6 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
-  # Drift 코드 생성
-  drift_dev: ^2.30.0
   # 코드 생성
   build_runner: ^2.10.4
 
