@@ -1,12 +1,15 @@
 import 'dart:io';
 
 import 'package:ch17_calendar_scheduler/model/schedule.dart';
+import 'package:ch17_calendar_scheduler/provider/schedule_provider.dart';
+import 'package:ch17_calendar_scheduler/repository/schedule_repository.dart';
 import 'package:ch17_calendar_scheduler/screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:sqlite3/sqlite3.dart';
 
 void main() async {
@@ -27,5 +30,13 @@ void main() async {
   // 의존성을 주입한다.
   GetIt.I.registerSingleton<Database>(database);
 
-  runApp(MaterialApp(home: HomeScreen()));
+  final repository = ScheduleRepository();
+  final scheduleProvider = ScheduleProvider(repository: repository);
+
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => scheduleProvider,
+      child: MaterialApp(home: HomeScreen()),
+    ),
+  );
 }
