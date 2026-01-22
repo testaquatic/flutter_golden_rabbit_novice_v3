@@ -37,20 +37,24 @@ dependencies:
   # 달력 기능
   table_calendar: ^3.2.0
   # 경로
-  path_provider: ^2.1.5
-  path: ^1.9.1
+  # path_provider: ^2.1.5
+  # path: ^1.9.1
   # 전역 의존성 주입
-  get_it: ^9.2.0
+  # get_it: ^9.2.0
   # http 요청과 응답 처리
   dio: ^5.9.0
   # 글로벌 상태 관리
-  provider: ^6.1.5+1
+  # provider: ^6.1.5+1
   # UUID
   uuid: ^4.5.2
   # 다국어화
   intl: ^0.20.2
   # sqlite3
   sqlite3: ^3.1.1
+  # firebase 기본 플러그인
+  firebase_core: ^4.4.0
+  # 파이어스토어
+  cloud_firestore: ^6.1.2
 
 
 dev_dependencies:
