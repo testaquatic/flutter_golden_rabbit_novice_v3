@@ -42,7 +42,7 @@ dependencies:
   # 전역 의존성 주입
   # get_it: ^9.2.0
   # http 요청과 응답 처리
-  dio: ^5.9.0
+  # dio: ^5.9.0
   # 글로벌 상태 관리
   # provider: ^6.1.5+1
   # UUID
@@ -50,7 +50,7 @@ dependencies:
   # 다국어화
   intl: ^0.20.2
   # sqlite3
-  sqlite3: ^3.1.1
+  # sqlite3: ^3.1.1
   # firebase 기본 플러그인
   firebase_core: ^4.4.0
   # 파이어스토어
