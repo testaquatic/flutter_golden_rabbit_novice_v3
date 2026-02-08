@@ -61,7 +61,7 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
     super.didUpdateWidget(oldWidget);
 
     if (oldWidget.video.path != widget.video.path) {
-      videoPlayerController?.dispose();
+      videoPlayerController?.pause();
       initializeController();
     }
   }
