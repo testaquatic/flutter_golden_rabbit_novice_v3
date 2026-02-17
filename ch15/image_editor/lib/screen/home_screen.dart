@@ -117,13 +117,14 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  /// 이미지를 저장한다.
   void onSaveImage() async {
     if (imgKey.currentContext == null) {
       throw Exception("imgKey.currentContext is null");
     }
     // 이하로 image.currentContext는 null이 아니다.
 
-    var boundary = imgKey.currentContext!.findRenderObject();
+    final boundary = imgKey.currentContext!.findRenderObject();
     if (boundary == null || boundary is! RenderRepaintBoundary) {
       throw Exception("boundary is null or not RenderRepaintBoundary");
     }
@@ -146,6 +147,7 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
+  /// 선택된 스티커를 삭제한다.
   void onDeleteItem() {
     setState(() {
       stickers.removeWhere((sticker) {
@@ -157,6 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  /// 이모티콘을 탭 했을 때 실행하는 콜백
   void onEmoticonTab(int index) async {
     setState(() {
       stickers.add(
@@ -165,6 +168,7 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  /// 스티커를 탭 했을 때 실행되는 콜백
   void onTransForm(String id) {
     setState(() {
       selectedId = id;
