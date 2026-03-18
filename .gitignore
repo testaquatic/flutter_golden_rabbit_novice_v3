@@ -1,0 +1,6 @@
+assets/
+asset/
+secret/
+google-services.json
+firebase_options.dart
+firebase.json
